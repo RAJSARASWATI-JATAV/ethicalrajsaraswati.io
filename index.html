@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJSARASWATI JATAV - Advanced Ethical Hacking Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 class="brand-name">RAJSARASWATI JATAV</h1>
+                    <span class="brand-tagline">Ethical Hacking Platform</span>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-item dropdown">
+                        <a href="#tools" class="nav-link">Tools</a>
+                        <div class="dropdown-content">
+                            <a href="#network">Network Testing</a>
+                            <a href="#web">Web Security</a>
+                            <a href="#wifi">WiFi Security</a>
+                            <a href="#crypto">Cryptography</a>
+                            <a href="#osint">OSINT</a>
+                            <a href="#social">Social Engineering</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#labs" class="nav-link">Labs</a>
+                        <div class="dropdown-content">
+                            <a href="#beginner-labs">Beginner</a>
+                            <a href="#intermediate-labs">Intermediate</a>
+                            <a href="#advanced-labs">Advanced</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#learning" class="nav-link">Learning</a>
+                        <div class="dropdown-content">
+                            <a href="#courses">Courses</a>
+                            <a href="#certifications">Certifications</a>
+                            <a href="#tutorials">Tutorials</a>
+                        </div>
+                    </div>
+                    <a href="#community" class="nav-link">Community</a>
+                    <a href="#news" class="nav-link">News</a>
+                    <a href="#enterprise" class="nav-link">Enterprise</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search tools, tutorials, labs..." id="searchInput">
+                        <button class="search-btn" id="searchBtn">🔍</button>
+                    </div>
+                    
+                    <div class="theme-selector">
+                        <select id="themeSelector" class="form-control theme-select">
+                            <option value="dark">Dark Mode</option>
+                            <option value="matrix">Matrix Green</option>
+                            <option value="hacker">Hacker Red</option>
+                            <option value="professional">Professional Blue</option>
+                        </select>
+                    </div>
+                    
+                    <div class="language-selector">
+                        <select id="languageSelector" class="form-control lang-select">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn--outline btn--sm" id="loginBtn">Login</button>
+                    <button class="btn btn--primary btn--sm" id="registerBtn">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="matrix-bg" id="matrixBg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text" id="typingText">Advanced Ethical Hacking Platform</span>
+                    </h1>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">+ Ethical Hacking Tools</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50000">0</span>
+                            <span class="stat-label">+ Global Community</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10000">0</span>
+                            <span class="stat-label">+ Monthly Labs</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">
+                        Master cybersecurity with AI-powered tools, interactive labs, and expert community support. 
+                        Join the world's most comprehensive ethical hacking platform.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg cta-btn" id="exploreToolsBtn">Explore Tools</button>
+                        <button class="btn btn--outline btn--lg cta-btn" id="startLearningBtn">Start Learning</button>
+                        <button class="btn btn--secondary btn--lg cta-btn" id="joinCommunityBtn">Join Community</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Dashboard -->
+    <section class="section tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Tools Arsenal</h2>
+                <p class="section-description">Access 500+ premium ethical hacking tools organized by category</p>
+                
+                <div class="tools-filters">
+                    <button class="filter-btn active" data-category="all">All Tools</button>
+                    <button class="filter-btn" data-category="network">Network</button>
+                    <button class="filter-btn" data-category="web">Web Security</button>
+                    <button class="filter-btn" data-category="wifi">WiFi</button>
+                    <button class="filter-btn" data-category="crypto">Cryptography</button>
+                    <button class="filter-btn" data-category="osint">OSINT</button>
+                    <button class="filter-btn" data-category="social">Social Engineering</button>
+                </div>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Labs -->
+    <section class="section labs-section" id="labs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Virtual Labs</h2>
+                <p class="section-description">Practice in safe, realistic environments</p>
+            </div>
+
+            <div class="labs-grid">
+                <div class="lab-card">
+                    <div class="lab-header">
+                        <h3>Network Penetration Lab</h3>
+                        <span class="status status--warning">Intermediate</span>
+                    </div>
+                    <p>Practice network scanning and exploitation in safe environment</p>
+                    <div class="lab-stats">
+                        <span>👥 1,234 Active</span>
+                        <span>⭐ 4.8/5</span>
+                        <span>🕒 2-3 hours</span>
+                    </div>
+                    <button class="btn btn--primary lab-btn">Launch Lab</button>
+                </div>
+
+                <div class="lab-card">
+                    <div class="lab-header">
+                        <h3>Web Application Testing Lab</h3>
+                        <span class="status status--success">Beginner</span>
+                    </div>
+                    <p>Learn to identify and exploit web vulnerabilities</p>
+                    <div class="lab-stats">
+                        <span>👥 2,456 Active</span>
+                        <span>⭐ 4.9/5</span>
+                        <span>🕒 1-2 hours</span>
+                    </div>
+                    <button class="btn btn--primary lab-btn">Launch Lab</button>
+                </div>
+
+                <div class="lab-card">
+                    <div class="lab-header">
+                        <h3>Malware Analysis Sandbox</h3>
+                        <span class="status status--error">Advanced</span>
+                    </div>
+                    <p>Analyze suspicious files in isolated environment</p>
+                    <div class="lab-stats">
+                        <span>👥 567 Active</span>
+                        <span>⭐ 4.7/5</span>
+                        <span>🕒 3-4 hours</span>
+                    </div>
+                    <button class="btn btn--primary lab-btn">Launch Lab</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Hub -->
+    <section class="section learning-section" id="learning">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Learning Hub</h2>
+                <p class="section-description">Master cybersecurity with structured learning paths</p>
+            </div>
+
+            <div class="learning-tabs">
+                <button class="tab-btn active" data-tab="courses">Courses</button>
+                <button class="tab-btn" data-tab="certifications">Certifications</button>
+                <button class="tab-btn" data-tab="tutorials">Tutorials</button>
+            </div>
+
+            <div class="tab-content active" id="courses">
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-level beginner">Beginner</div>
+                        <h3>Introduction to Ethical Hacking</h3>
+                        <p>Start your cybersecurity journey with fundamentals</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span>0% Complete</span>
+                        </div>
+                        <button class="btn btn--primary course-btn">Start Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-level intermediate">Intermediate</div>
+                        <h3>Advanced Penetration Testing</h3>
+                        <p>Deep dive into advanced testing methodologies</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span>0% Complete</span>
+                        </div>
+                        <button class="btn btn--primary course-btn">Start Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-level advanced">Advanced</div>
+                        <h3>AI in Cybersecurity</h3>
+                        <p>Explore cutting-edge AI applications in security</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span>0% Complete</span>
+                        </div>
+                        <button class="btn btn--primary course-btn">Start Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="certifications">
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <h3>Certified Ethical Hacker (CEH)</h3>
+                        <p>Industry-recognized certification for ethical hackers</p>
+                        <div class="cert-stats">
+                            <span>📈 95% Pass Rate</span>
+                            <span>🏆 5,000+ Certified</span>
+                        </div>
+                        <button class="btn btn--primary cert-btn">Start Preparation</button>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <h3>OSCP - Offensive Security</h3>
+                        <p>Hands-on penetration testing certification</p>
+                        <div class="cert-stats">
+                            <span>📈 87% Pass Rate</span>
+                            <span>🏆 2,500+ Certified</span>
+                        </div>
+                        <button class="btn btn--primary cert-btn">Start Preparation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tutorials">
+                <div class="tutorials-grid">
+                    <div class="tutorial-card">
+                        <h3>Network Security Fundamentals</h3>
+                        <p>Essential network security concepts and practices</p>
+                        <div class="tutorial-meta">
+                            <span>📖 15 Chapters</span>
+                            <span>🕒 4 hours</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <button class="btn btn--primary tutorial-btn">Start Tutorial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="section community-section" id="community">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Global Security Community</h2>
+                <p class="section-description">Connect, learn, and share with security professionals worldwide</p>
+            </div>
+
+            <div class="community-stats">
+                <div class="stat-card">
+                    <h3>50,000+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10,000+</h3>
+                    <p>Monthly Discussions</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5,000+</h3>
+                    <p>Expert Contributors</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Community Support</p>
+                </div>
+            </div>
+
+            <div class="community-features">
+                <div class="feature-card">
+                    <h3>Discussion Forums</h3>
+                    <p>Category-wise threads for specialized discussions</p>
+                    <button class="btn btn--primary feature-btn">Join Discussions</button>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Q&A Section</h3>
+                    <p>Get expert answers with community voting</p>
+                    <button class="btn btn--primary feature-btn">Ask Question</button>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Live Chat</h3>
+                    <p>Real-time collaboration and instant help</p>
+                    <button class="btn btn--primary feature-btn">Join Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Intelligence -->
+    <section class="section news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Security Intelligence</h2>
+                <p class="section-description">Stay updated with latest threats and vulnerabilities</p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="news-category threat">Threat Alert</span>
+                        <span class="news-date">2 hours ago</span>
+                    </div>
+                    <h3>New Zero-Day Vulnerability Discovered</h3>
+                    <p>Critical security flaw affects millions of devices worldwide...</p>
+                    <button class="btn btn--outline news-btn">Read More</button>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="news-category update">Security Update</span>
+                        <span class="news-date">5 hours ago</span>
+                    </div>
+                    <h3>Major Framework Update Released</h3>
+                    <p>Enhanced security features and new tool integrations...</p>
+                    <button class="btn btn--outline news-btn">Read More</button>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="news-category advisory">Advisory</span>
+                        <span class="news-date">1 day ago</span>
+                    </div>
+                    <h3>Best Practices for Remote Security</h3>
+                    <p>Essential guidelines for securing remote work environments...</p>
+                    <button class="btn btn--outline news-btn">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Dashboard -->
+    <section class="section enterprise-section" id="enterprise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Enterprise Solutions</h2>
+                <p class="section-description">Advanced team management and enterprise-grade security tools</p>
+            </div>
+
+            <div class="enterprise-features">
+                <div class="enterprise-card">
+                    <h3>Team Management</h3>
+                    <p>Centralized user management and access control</p>
+                    <ul>
+                        <li>Role-based permissions</li>
+                        <li>Activity monitoring</li>
+                        <li>Team collaboration tools</li>
+                    </ul>
+                    <button class="btn btn--primary enterprise-btn">Learn More</button>
+                </div>
+
+                <div class="enterprise-card">
+                    <h3>Analytics & Reporting</h3>
+                    <p>Comprehensive usage analytics and compliance reporting</p>
+                    <ul>
+                        <li>Real-time dashboards</li>
+                        <li>Custom reports</li>
+                        <li>Compliance tracking</li>
+                    </ul>
+                    <button class="btn btn--primary enterprise-btn">Learn More</button>
+                </div>
+
+                <div class="enterprise-card">
+                    <h3>Custom Deployment</h3>
+                    <p>On-premise and cloud deployment options</p>
+                    <ul>
+                        <li>Private cloud hosting</li>
+                        <li>Custom integrations</li>
+                        <li>24/7 enterprise support</li>
+                    </ul>
+                    <button class="btn btn--primary enterprise-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RAJSARASWATI JATAV</h3>
+                    <p>The world's most advanced ethical hacking platform</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Discord</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#labs">Labs</a></li>
+                        <li><a href="#learning">Learning</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#news">Security News</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#enterprise">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with latest security insights</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="form-control newsletter-input">
+                        <button class="btn btn--primary newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 RAJSARASWATI JATAV. All rights reserved. | Made with ❤️ for the cybersecurity community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Authentication -->
+    <div class="modal hidden" id="authModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Login</h2>
+            </div>
+            <div class="modal-body">
+                <form id="authForm">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width" id="authSubmitBtn">Login</button>
+                </form>
+                <p class="auth-switch">
+                    <span id="authSwitchText">Don't have an account?</span>
+                    <a href="#" id="authSwitchLink">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
